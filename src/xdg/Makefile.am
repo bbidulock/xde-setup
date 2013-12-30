@@ -7,7 +7,7 @@ nobase_dist_xdgconf_DATA = \
 	pcmanfm/ICEWM/pcmanfm.conf \
 	pcmanfm/OPENBOX/pcmanfm.conf \
 	pcmanfm/WMAKER/pcmanfm.conf \
-	xde/xde-session/BLACKBOX/desktop.conf \ \
+	xde/xde-session/BLACKBOX/desktop.conf \
 	xde/xde-session/default/input.ini \
 	xde/xde-session/default/xsettings.ini \
 	xde/xde-session/FLUXBOX/autostart \
