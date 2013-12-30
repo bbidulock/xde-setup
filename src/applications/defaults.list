@@ -1,0 +1,10 @@
+[Default Applications]
+application/pdf=AdobeReader.desktop
+application/vnd.adobe.xfdf=AdobeReader.desktop
+application/vnd.fdf=AdobeReader.desktop
+application/vnd.adobe.xdp+xml=AdobeReader.desktop
+application/vnd.adobe.pdx=AdobeReader.desktop
+application/fdf=AdobeReader.desktop
+application/xdp=AdobeReader.desktop
+application/xfdf=AdobeReader.desktop
+application/pdx=AdobeReader.desktop

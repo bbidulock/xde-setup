@@ -1,0 +1,6 @@
+[MIME Cache]
+application/vnd.mozilla.xul+xml=preferred-web-browser.desktop;
+application/xhtml+xml=preferred-web-browser.desktop;
+text/html=preferred-web-browser.desktop;
+text/mml=preferred-web-browser.desktop;
+text/xml=preferred-web-browser.desktop;
