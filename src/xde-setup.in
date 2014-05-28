@@ -1,0 +1,28 @@
+#!/bin/bash
+
+prefix="@prefix@"
+datarootdir="@datarootdir@"
+datadir="@datadir@"
+sysconfdir="@sysconfdir@"
+xdgconfdir="@xdgconfdir@"
+xdgdir="@xdgdir@"
+xdedir="@xdedir@"
+
+XDG_CONFIG_HOME=${XDG_CONFIG_HOME:${HOME:=~}/.config}
+XDG_CONFIG_DIRS=${XDG_CONFIG_DIRS:-${xdgconfdir}}
+XDG_DATA_HOME=${XDG_DATA_HOME:-${HOEM:-~}/.local/share}
+XDG_DATA_DIRS=${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
+
+XDE_CONFIG_HOME=${XDE_CONFIG_HOME:-${XDG_CONFIG_HOME}/xde}
+XDE_CONFIG_DIRS=${XDE_CONFIG_DIRS:-$(echo "$XDG_CONFIG_DIRS:"|sed 's,:,/xde:,g;s,/xde:$,/xde,')}
+XDE_DATA_HOME=${XDE_DATA_HOME:-${XDG_DATA_HOME}/xde}
+XDE_DATA_DIRS=${XDE_DATA_DIRS:-$(echo "$XDG_DATA_DIRS:"|sed 's,:,/xde:,g;s,/xde:$,/xde,')}
+
+FB_CONFIG_HOME=${FB_CONFIG_HOME:-$XDE_CONFIG_HOME/fluxbox}
+BB_CONFIG_HOME=${BB_CONFIG_HOME:-$XDE_CONFIG_HOME/blackbox}
+OB_CONFIG_HOME=${OB_CONFIG_HOME:-$XDE_CONFIG_HOME/openbox}
+ICE_CONFIG_HOME=${ICE_CONFIG_HOME:-$XDE_CONFIG_HOME/icewm}
+JWM_CONFIG_HOME=${JWM_CONFIG_HOME:-$XDE_CONFIG_HOME/jwm}
+PEK_CONFIG_HOME=${PEK_CONFIG_HOME:-$XDE_CONFIG_HOME/pek}
+
+# vim: set sw=4 tw=72:

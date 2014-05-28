@@ -1,0 +1,43 @@
+#!/bin/bash
+
+here="$(dirname $0)"
+prog="$(basename $0)"
+case "$here" in /*) ;; *) here=`(cd "$here"; pwd)` ;; esac
+
+name=ctwm
+files="apps buttons config defaults getstyles keys menu rc.m4 setstyle start stylemenu winmenu"
+udirs="pixmaps styles"
+
+. "$here/common"
+
+if [ ! -f "$userdir/stylerc" ]; then
+	rm -f "$userdir/stylerc"
+	ln -sf "/usr/share/ctwm/styles/Default/stylerc" "$userdir/stylerc"
+fi
+
+if [ -z "$XDE_NOEXEC" ]; then
+	if true; then
+		export CTWM_TYPE='ctwm'
+		export CTWM_VERSION=$(/usr/bin/ctwm -version)
+		export CTWM_CONFIG_HOME="$userdir"
+		export CTWM_CONFIG_SDIR="/usr/share/$CTWM_TYPE"
+		if [ -x "$CTWM_CONFIG_SDIR/config" ]; then
+			"$CTWM_CONFIG_SDIR/config" $CTWM_TYPE $CTWM_VERSION
+		elif [ -x "$CTWM_CONFIG_HOME/config" ]; then
+			"$CTWM_CONFIG_HOME/config" $CTWM_TYPE $CTWM_VERSION
+		else
+			echo "WARNING: cannot find config program" >&2
+			echo "WARNING: winging it" >&2
+			exec $prog -k -K "$userdir/rc" -f "$userdir/rc.m4"
+		fi
+		exec $prog -n -f "$userdir/rc"
+	else
+		exec $prog -k -K "$userdir/rc" -f "$userdir/rc.m4"
+	fi
+else
+	if true; then
+		echo "would execute $prog -n -f $userdir/rc" >&2
+	else
+		echo "would execute $prog -k -K $userdir/rc -f $userdir/rc.m4" >&2
+	fi
+fi

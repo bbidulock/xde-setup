@@ -1,0 +1,70 @@
+#!/bin/bash
+
+VERSION="@VERSION@"
+
+here="$(dirname $0)"
+case "$here" in /*) ;; *) here=`(cd "$here"; pwd)` ;; esac
+
+name=jwm
+prog=jwm
+files="defaults desktop groups keys menu paths rc root setstyle style tray"
+udirs="icons styles themes"
+
+[ -n "$XDG_CONFIG_HOME" ] || XDG_CONFIG_HOME="$HOME/.config"
+[ -n "$XDG_DATA_HOME"   ] || XDG_DATA_HOME="$HOME/.local/share"
+[ -n "$XDG_CONFIG_DIRS" ] || XDG_CONFIG_DIRS="/etc/xdg"
+[ -n "$XDG_DATA_DIRS"   ] || XDG_DATA_DIRS="/usr/local/share:/usr/share"
+
+config=/usr/share/xde/$name
+
+if [ "$here" != "$config" ]; then
+	echo "Executed from $here" >&2
+	config="$here"
+	echo "Config dir is $config" >&2
+fi
+
+userdir="$XDG_CONFIG_HOME/$name"
+
+[ -d "$userdir" ] || mkdir -pv "$userdir"
+
+needconfig=true
+needupdate=false
+
+if [ -f "$userdir/.version" ]; then
+	needconfig=false
+	version=$(cat "$userdir/.version")
+	if [ "$version" != "$VERSION" ]; then
+		needupdate=true
+	fi
+fi
+
+if [ "$needconfig" = true ]; then
+	echo "Need configuration..." >&2
+fi
+
+if [ "$needupdate" = true ]; then
+	echo "Need update..." >&2
+fi
+
+if [ "$needconfig" = true -o "$needupdate" = true ]; then
+	echo "Need config or update..." >&2
+	for d in $udirs; do
+		mkdir -pv "$userdir/$d"
+	done
+	for f in $files; do
+		/bin/cp -aufv "$config/$f" "$userdir/$f"
+		sed -i -e "s,\~/\.$name,$userdir,;s,\$HOME/\.$name,$userdir,;s,~/,$HOME/," "$userdir/$f"
+	done
+	( cd "$userdir"; md5sum $files ) >"$userdir/.versions"
+	echo -n "$VERSION" >"$userdir/.version"
+fi
+
+
+if [ -z "$XDE_NOEXEC" ]; then
+	rm -f ~/.jwmrc
+	ln -sf "$userdir/rc" ~/.jwmrc
+	exec $prog "$@"
+	#exec $prog "$@" -f $userdir/init
+else
+	echo "would execute $prog $@ -f $userdir/init" >&2
+fi

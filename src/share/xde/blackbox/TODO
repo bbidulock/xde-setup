@@ -1,0 +1,6 @@
+
+- [ ] does file 'keys' need to contain a styleFile option or will
+      bbkeys take the style from the blackbox style?
+
+- [ ] as we use bbkeys for some other window managers too, do we
+      need to change the styleFile option with xde-style program?

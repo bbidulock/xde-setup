@@ -14,14 +14,14 @@ AC_PROG_LN_S
 AC_PROG_MAKE_SET
 AC_PROG_MKDIR_P
 
-xdedir='$(datadir)/xde'
-appldir='$(xdedir)/applications'
-sessdir='$(xdedir)/xsessions'
-dirsdir='$(xdedir)/desktop-directories'
-xdgconfdir='$(sysconfdir)/xdg'
-xdgdir='$(xdgconfdir)/xde'
-autodir='$(xdgdir)/autostart'
-menudir='$(xdgdir)/menus'
+xdedir='${datadir}/xde'
+appldir='${xdedir}/applications'
+sessdir='${xdedir}/xsessions'
+dirsdir='${xdedir}/desktop-directories'
+xdgconfdir='${sysconfdir}/xdg'
+xdgdir='${xdgconfdir}/xde'
+autodir='${xdgdir}/autostart'
+menudir='${xdgdir}/menus'
 
 AC_SUBST([xdedir])
 AC_SUBST([appldir])
@@ -33,6 +33,7 @@ AC_SUBST([autodir])
 AC_SUBST([menudir])
 
 AC_CONFIG_FILES([Makefile
+		 src/xde-setup
 		 src/Makefile
 		 src/share/Makefile
 		 src/xdg/Makefile])

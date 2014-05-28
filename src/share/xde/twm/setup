@@ -1,0 +1,113 @@
+#!/bin/bash
+
+here="$(dirname $0)"
+case "$here" in /*) ;; *) here=`(cd "$here"; pwd)` ;; esac
+
+name=twm
+prog=${1:-${TWM_TYPE:-$name}}
+vers=${2:-${TWM_VERSION}}
+files="apps buttons defaults keys menu stylemenu version winmenu"
+progs="config getstyles setstyle start"
+udirs="backgrounds styles"
+
+[ -n "$XDG_CONFIG_HOME" ] || XDG_CONFIG_HOME="$HOME/.config"
+[ -n "$XDG_DATA_HOME"   ] || XDG_DATA_HOME="$HOME/.local/share"
+[ -n "$XDG_CONFIG_DIRS" ] || XDG_CONFIG_DIRS="/etc/xdg"
+[ -n "$XDG_DATA_DIRS"   ] || XDG_DATA_DIRS="/usr/local/share:/usr/share"
+
+if [ ! -x "`which $prog 2>/dev/null`" ]; then
+    echo "ERROR: cannot find usable $prog program" >&2
+    exit 1
+fi
+if [ -z "$vers" ]; then
+    vers='1.0.8'
+fi
+export TWM_TYPE="$prog"
+export TWM_VERSION="$vers"
+export TWM_CONFIG_PRIV=${TWM_CONFIG_PRIV:-${XDG_CONFIG_HOME:-${HOME:-~}/.config}/$prog}
+export TWM_CONFIG_HOME=${TWM_CONFIG_HOME:-${HOME:-~}/.$prog}
+export TWM_CONFIG_SDIR=${TWM_CONFIG_SDIR:-/usr/share/$prog}
+export TWM_CONFIG_EDIR=${TWM_CONFIG_EDIR:-/usr/share/xde/$prog}
+
+for d in "$TWM_CONFIG_PRIV" "$TWM_CONFIG_HOME"; do
+    [ -d "$d" ] || mkdir -p "$d"
+    if [ -s "$here/version" ]; then
+	if [ ! -s "$d/version" -o ! diff "$here/version" "$d/version" ]; then
+	    for f in $files; do
+		if [ ! -f "$here/$f" -o ! diff "$here/$f" "$d/$f" ]; then
+		    [ ! -f "$d/$f" ] || /bin/mv -f "$d/$f" "$d/$f.bak"
+		    case " $progs " in
+		    *" $f "*) ;;
+		    *) sed -e "s,\~/\.$name,$d,;s,\$HOME/\.$name,$d,;s,~/,$HOME/," "$d/$f" "$here/$f" >"$d/$f" ;;
+		    esac
+		fi
+	    done
+	    for u in $udirs; do
+		[ -d "$u" ] || mkdir -p "$u"
+	    done
+	    (cd "$d"; md5sum $files >.versions)
+	fi
+    fi
+done
+
+export XDG_CURRENT_DESKTOP=$(echo "$prog"|sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/')
+
+if [ -x "`which xdg-menugen 2>/dev/null`" ]; then
+    xdg-menugen --format "$prog" --desktop "$XDG_CURRENT_DESKTOP" -o "$BBWM_CONFIG_PRIV/menu" &
+    xdg-menugen --format "$prog" --desktop "$XDG_CURRENT_DESKTOP" -o "$BBWM_CONFIG_HOME/menu" &
+elif [ -x "`which xde-menugen 2>/dev/null`" ]; then
+    xde-menugen --format "$prog" --desktop "$XDG_CURRENT_DESKTOP" >"$BBWM_CONFIG_PRIV/menu" &
+    xde-menugen --format "$prog" --desktop "$XDG_CURRENT_DESKTOP" >"$BBWM_CONFIG_HOME/menu" &
+fi
+
+config="$here/config"
+[ -x "$config" ] || config="$TWM_CONFIG_PRIV/config"
+[ -x "$config" ] || config="$TWM_CONFIG_HOME/config"
+[ -x "$config" ] || config="$TWM_CONFIG_SDIR/config"
+[ -x "$config" ] || config="$TWM_CONFIG_EDIR/config"
+[ -x "$config" ] && $config
+
+getstyles="$here/getstyles"
+[ -x "$getstyles" ] || getstyles="$TWM_CONFIG_PRIV/getstyles"
+[ -x "$getstyles" ] || getstyles="$TWM_CONFIG_HOME/getstyles"
+[ -x "$getstyles" ] || getstyles="$TWM_CONFIG_SDIR/getstyles"
+[ -x "$getstyles" ] || getstyles="$TWM_CONFIG_EDIR/getstyles"
+[ -x "$getstyles" ] && $getstyles
+
+if [ -z "$XDE_USE_XDG_HOME" ]; then
+    path="$TWM_CONFIG_HOME"
+else
+    path="$TWM_CONFIG_PRIV"
+fi
+
+export TWM_RCFILE="${HOME:-~}/.${prog}rc"
+
+if [ -L "$TWM_RCFILE" ]; then
+    /bin/rm -f "$TWM_RCFILE"
+elif [ -s  "$TWM_RCFILE" ]; then
+    /bin/mv -f "${TWM_RCFILE}" "${TWM_RCFILE}.bak"
+fi
+/bin/ln -sf "$TWM_CONFIG_HOME/rc" "$TWM_RCFILE"
+
+if [ -z "$XDE_NOEXEC" ]; then
+    export TWM_TYPE="$prog"
+    export TWM_VERSION="$vers"
+    export TWM_CONFIG_HOME="$path"
+    export TWM_CONFIG_SDIR="$TWM_CONFIG_SDIR"
+    if [ -x "$TWM_CONFIG_SDIR/config" ]; then
+	"$TWM_CONFIG_SDIR/config" $TWM_TYPE $TWM_VERSION
+    elif [ -x "$TWM_CONFIG_HOME/config" ]; then
+	"$TWM_CONFIG_HOME/config" $TWM_TYPE $TWM_VERSION
+    else
+	echo "WARNING: cannot find config program: winging it" >&2
+    fi
+    exec $TWM_TYPE -f "$TWM_CONFIG_HOME/rc"
+else
+    echo "export TWM_TYPE=\"$prog\"" >&2
+    echo "export TWM_VERSION=\"$vers\"" >&2
+    echo "export TWM_CONFIG_HOME=\"$path\"" >&2
+    echo "export TWM_CONFIG_SDIR=\"$TWM_CONFIG_SDIR\"" >&2
+    echo "exec $TWM_TYPE -f \"$TWM_CONFIG_HOME/rc\"" >&2
+fi
+
+# vim: set ft=sh sw=4:

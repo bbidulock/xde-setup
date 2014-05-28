@@ -1,0 +1,34 @@
+#!/bin/bash
+
+here="$(dirname $0)"
+prog="$(basename $0)"
+case "$here" in /*) ;; *) here=`(cd "$here"; pwd)` ;; esac
+
+name=twm
+files="apps buttons config defaults getstyles keys menu rc.m4 setstyle start stylemenu winmenu"
+dires="bitmaps styles"
+
+. "$here/common"
+
+if [ ! -f "$userdir/stylerc" ]; then
+	rm -f "$userdir/stylerc"
+	ln -sf "/usr/share/twm/styles/Default/stylerc" "$userdir/stylerc"
+fi
+
+if [ -z "$XDE_NOEXEC" ]; then
+	export TWM_TYPE='twm'
+	export TWM_VERSION='1.0.8'
+	export TWM_CONFIG_HOME="$userdir"
+	export TWM_CONFIG_SDIR="/usr/share/$TWM_TYPE"
+	if [ -x "$TWM_CONFIG_SDIR/config" ]; then
+		"$TWM_CONFIG_SDIR/config" $TWM_TYPE $TWM_VERSION
+	elif [ -x "$TWM_CONFIG_HOME/config" ]; then
+		"$TWM_CONFIG_HOME/config" $TWM_TYPE $TWM_VERSION
+	else
+		echo "WARNING: cannot find config program" >&2
+		echo "WARNING: winging it" >&2
+	fi
+	exec $prog -f "$userdir/rc"
+else
+	echo "would execute $prog -f $userdir/rc" >&2
+fi

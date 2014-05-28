@@ -1,0 +1,43 @@
+#!/bin/bash
+
+here="$(dirname $0)"
+prog="$(basename $0)"
+case "$here" in /*) ;; *) here=`(cd "$here"; pwd)` ;; esac
+
+name=vtwm
+files="apps buttons config defaults getstyles keys menu rc.m4 setstyle start stylemenu winmenu"
+dires="pixmaps styles"
+
+. "$here/common"
+
+if [ ! -f "$userdir/stylerc" ]; then
+	rm -f "$userdir/stylerc"
+	ln -sf "/usr/share/vtwm/styles/Default/stylerc" "$userdir/stylerc"
+fi
+
+if [ -z "$XDE_NOEXEC" ]; then
+	if true; then
+		export VTWM_TYPE='vtwm'
+		export VTWM_VERSION=$(/usr/bin/vtwm -V|sed 's,^.*Release ,,;s,-.*,,;t')
+		export VTWM_CONFIG_HOME="$userdir"
+		export VTWM_CONFIG_SDIR="/usr/share/$VTWM_TYPE"
+		if [ -x "$VTWM_CONFIG_SDIR/config" ]; then
+			"$VTWM_CONFIG_SDIR/config" $VTWM_TYPE $VTWM_VERSION
+		elif [ -x "$VTWM_CONFIG_HOME/config" ]; then
+			"$VTWM_CONFIG_HOME/config" $VTWM_TYPE $VTWM_VERSION
+		else
+			echo "WARNING: cannot find config program" >&2
+			echo "WARNING: winging it" >&2
+			exec $prog -m -f "$userdir/rc.m4"
+		fi
+		exec $prog -f "$userdir/rc"
+	else
+		exec $prog -m -f "$userdir/rc.m4"
+	fi
+else
+	if true; then
+		echo "would execute $prog -f $userdir/rc" >&2
+	else
+		echo "would execute $prog -m -f $userdir/rc.m4" >&2
+	fi
+fi

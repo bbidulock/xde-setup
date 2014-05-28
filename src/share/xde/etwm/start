@@ -1,0 +1,73 @@
+#!/bin/bash
+
+here="$(dirname $0)"
+case "$here" in /*) ;; *) here=`(cd "$here"; pwd)` ;; esac
+
+name=etwm
+
+[ -n "$XDG_CONFIG_HOME" ] || XDG_CONFIG_HOME="$HOME/.config"
+[ -n "$XDG_DATA_HOME"   ] || XDG_DATA_HOME="$HOME/.local/share"
+[ -n "$XDG_CONFIG_DIRS" ] || XDG_CONFIG_DIRS="/etc/xdg"
+[ -n "$XDG_DATA_DIRS"   ] || XDG_DATA_DIRS="/usr/local/share:/usr/share"
+
+prog=${1:-${TWM_TYPE:-$name}}
+if [ ! -x "`which $prog 2>/dev/null`" ]; then
+    echo "ERROR: cannot find usable $prog program" >&2
+    exit 1
+fi
+vers=${2:-${TWM_VERSION}}
+if [ -z "$vers" ]; then
+    if $prog -version >/dev/null 2>&1; then
+	vers=$(LANG= $prog -version 2>/dev/null)
+    else
+	vers='3.8.1'
+    fi
+fi
+sdir="${TWM_CONFIG_SDIR:-/usr/share/$prog}"
+if [ -z "$XDG_USE_XDG_HOME" ]; then
+    path="${TWM_CONFIG_HOME:-${HOME:-~}/.$prog}"
+else
+    path="${TWM_CONFIG_HOME:-${XDG_CONFIG_HOME:-${HOME:-~}/.config}/$prog}"
+fi
+export TWM_TYPE="$prog"
+export TWM_VERSION="$vers"
+export TWM_CONFIG_HOME="$path"
+export TWM_CONFIG_SDIR="$sdir"
+export TWM_CONFIG_EDIR="$here"
+
+xprop -root -format _NET_WM_PID 32c -set _NET_WM_PID $$
+xprop -root -format _NET_WM_NAME 8u -set _NET_WM_NAME "$prog $vers"
+
+if [ -z "$XDE_NOEXEC" ]; then
+    export TWM_TYPE="$prog"
+    export TWM_VERSION="$vers"
+    export TWM_CONFIG_HOME="$path"
+    export TWM_CONFIG_SDIR="$sdir"
+    if true; then
+	if [ -x "$sdir/config" ]; then
+	    "$sdir/config" $prog $vers
+	elif [ -x "$path/config" ]; then
+	    "$path/config" $prog $vers
+	else
+	    echo "WARNING: cannot find config program: winging it" >&2
+	    exec $prog -k -K "$path/rc" -f "$path/rc.m4"
+	fi
+	exec $prog -n -f "$path/rc"
+    else
+	exec $prog -k -K "$path/rc" -f "$path/rc.m4"
+    fi
+else
+    echo "export TWM_TYPE=\"$prog\"" >&2
+    echo "export TWM_VERSION=\"$vers\"" >&2
+    echo "export TWM_CONFIG_HOME=\"$path\"" >&2
+    echo "export TWM_CONFIG_SDIR=\"$sdir\"" >&2
+    if true; then
+	echo "exec $prog -n -f \"$path/rc\"" >&2
+    else
+	echo "exec $prog -k -K \"$path/rc\" -f \"$path/rc.m4\"" >&2
+    fi
+fi
+
+exit 1
+
+# vim: set ft=sh sw=4:
