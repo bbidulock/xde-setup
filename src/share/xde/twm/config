@@ -10,10 +10,8 @@ if [ ! -x "`which $TWM_TYPE 2>/dev/null`" ]; then
     echo "ERROR: cannot find usable $TWM_TYPE program" >&2
     exit 1;
 fi
-if [ -z "$TWM_VERSION" ]; then
-    TWM_VERSION='1.0.8'
-fi
-export TWM_VERSION=${2:-$TWM_VERSION}
+TWM_VERSION=${2:-${TWM_VERSION:-"1.0.8"}}
+export TWM_VERSION
 export TWM_CONFIG_HOME=${TWM_CONFIG_HOME:-${HOME:-~}/.$TWM_TYPE}
 export TWM_CONFIG_SDIR=${TWM_CONFIG_SDIR:-/usr/share/$TWM_TYPE}
 export TWM_RCFILE="${3:-${TWM_RCFILE:-$TWM_CONFIG_HOME/rc}}"
