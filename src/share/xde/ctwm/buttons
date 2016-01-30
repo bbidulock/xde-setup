@@ -41,6 +41,6 @@ Button3 = m	: frame		: f.resize
 ifelse(TWM_TYPE,`ctwm',`
 Button1 = m4	: frame|window|icon	: f.movepack
 Button1 = m4|c	: frame|window|icon	: f.movepush
-')dnl
+')
 divert(-1)
 dnl vim: ft=m4

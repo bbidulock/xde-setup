@@ -315,7 +315,7 @@ Menu "managers" twm_MenuColor
     "FLWM"                            f.exec "exec flwm &"
     "Fvwm"                            f.exec "exec fvwm2 &"
     "FVWM-Crystal"                    f.exec "exec fvwm-crystal &"
-    "icewm"                           f.exec "exec icewm &"
+    "IceWM"                           f.exec "exec icewm &"
     "Jwm"                             f.exec "exec /usr/bin/jwm &"
     "LXDE"                            f.exec "exec startlxde &"
     "MetaCity"                        f.exec "exec metacity &"

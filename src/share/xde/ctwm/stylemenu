@@ -4,77 +4,25 @@ Menu "twmstyles" twm_MenuColor
 {
     "System Styles"		f.title
 divert(FUNCTIONS)dnl
-Function "set-system-style-Airforce" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Airforce" f.function "reconfig" }
-divert(MENUS)dnl
-    "Airforce"		f.function "set-system-style-Airforce"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Archlinux" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Archlinux" f.function "reconfig" }
-divert(MENUS)dnl
-    "Archlinux"		f.function "set-system-style-Archlinux"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Atc" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Atc" f.function "reconfig" }
-divert(MENUS)dnl
-    "Atc"		f.function "set-system-style-Atc"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Aviation" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Aviation" f.function "reconfig" }
-divert(MENUS)dnl
-    "Aviation"		f.function "set-system-style-Aviation"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Blackbirds" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Blackbirds" f.function "reconfig" }
-divert(MENUS)dnl
-    "Blackbirds"		f.function "set-system-style-Blackbirds"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Circuits" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Circuits" f.function "reconfig" }
-divert(MENUS)dnl
-    "Circuits"		f.function "set-system-style-Circuits"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Classic" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Classic" f.function "reconfig" }
+Function "set-system-style-Classic" { f.exec "TWM_CONFIG_SDIR/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Classic" f.function "reconfig" }
 divert(MENUS)dnl
     "Classic"		f.function "set-system-style-Classic"
 divert(FUNCTIONS)dnl
-Function "set-system-style-Default" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Default" f.function "reconfig" }
-divert(MENUS)dnl
-    "Default"		f.function "set-system-style-Default"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Dishes" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Dishes" f.function "reconfig" }
-divert(MENUS)dnl
-    "Dishes"		f.function "set-system-style-Dishes"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Pedestals" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Pedestals" f.function "reconfig" }
-divert(MENUS)dnl
-    "Pedestals"		f.function "set-system-style-Pedestals"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Penguins" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Penguins" f.function "reconfig" }
-divert(MENUS)dnl
-    "Penguins"		f.function "set-system-style-Penguins"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Radar" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Radar" f.function "reconfig" }
-divert(MENUS)dnl
-    "Radar"		f.function "set-system-style-Radar"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Squared-blue" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Squared-blue" f.function "reconfig" }
+Function "set-system-style-Squared-blue" { f.exec "TWM_CONFIG_SDIR/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Squared-blue" f.function "reconfig" }
 divert(MENUS)dnl
     "Squared-blue"		f.function "set-system-style-Squared-blue"
 divert(FUNCTIONS)dnl
-Function "set-system-style-Squared-cadet" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Squared-cadet" f.function "reconfig" }
+Function "set-system-style-Squared-cadet" { f.exec "TWM_CONFIG_SDIR/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Squared-cadet" f.function "reconfig" }
 divert(MENUS)dnl
     "Squared-cadet"		f.function "set-system-style-Squared-cadet"
 divert(FUNCTIONS)dnl
-Function "set-system-style-Squared-green" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Squared-green" f.function "reconfig" }
+Function "set-system-style-Squared-green" { f.exec "TWM_CONFIG_SDIR/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Squared-green" f.function "reconfig" }
 divert(MENUS)dnl
     "Squared-green"		f.function "set-system-style-Squared-green"
 divert(FUNCTIONS)dnl
-Function "set-system-style-Squared-grey" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Squared-grey" f.function "reconfig" }
+Function "set-system-style-Squared-grey" { f.exec "TWM_CONFIG_SDIR/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Squared-grey" f.function "reconfig" }
 divert(MENUS)dnl
     "Squared-grey"		f.function "set-system-style-Squared-grey"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Telcom" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Telcom" f.function "reconfig" }
-divert(MENUS)dnl
-    "Telcom"		f.function "set-system-style-Telcom"
-divert(FUNCTIONS)dnl
-Function "set-system-style-Towers" { f.exec "TWM_CONFIG_HOME/setstyle TWM_TYPE TWM_CONFIG_SDIR/styles/Towers" f.function "reconfig" }
-divert(MENUS)dnl
-    "Towers"		f.function "set-system-style-Towers"
     "User Styles"		f.title
 }
 divert(-1)
