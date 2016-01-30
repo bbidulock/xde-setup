@@ -23,12 +23,12 @@ session.doubleClickInterval:	250
 session.focusNewWindows:	True
 session.fullMaximization:	False
 session.placementIgnoresShaded:	True
-session.windowPlacement:	MinOverlap
 session.shadeWindowWithMouseWheel:	True
 session.opaqueMove:	True
 session.windowSnapThreshold:	0
 session.colPlacementDirection:	TopToBottom
 session.disableBindingsWithScrollLock:	False
 session.toolbarActionsWithMouseWheel:	True
+session.windowPlacement:	MinOverlap
 session.menuFile:	~/.blackbox/menu
 session.styleFile:	/usr/share/blackbox/styles/Penguins
