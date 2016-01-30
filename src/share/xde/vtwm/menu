@@ -313,7 +313,7 @@ Menu "managers" twm_MenuColor
     "failsafewm"                      f.startwm "failsafewm"
     "Fluxbox"                         f.startwm "startfluxbox"
     "FLWM"                            f.startwm "flwm"
-    "Fvwm"                            f.startwm "fvwm2"
+    "FVWM"                            f.startwm "fvwm"
     "FVWM-Crystal"                    f.startwm "fvwm-crystal"
     "icewm"                           f.startwm "icewm"
     "Jwm"                             f.startwm "/usr/bin/jwm"
