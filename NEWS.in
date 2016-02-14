@@ -1,11 +1,11 @@
-xde-setup -- NEWS file.  2016-01-30
+@PACKAGE@ -- NEWS file.  @DATE@
 
 History of major user-visible changes:
 ======================================
 
-Release xde-setup-1.0.24 released 2016-01-30
+Release @PACKAGE@-@VERSION@ released @DATE@
 -------------------------------------------
 
-This is the initial development release of xde-setup.
+This is the initial development release of @PACKAGE@.
 
 # vim: set ft=asciidoc tw=72 nocin nosi fo+=tcqlorn:
