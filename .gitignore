@@ -12,3 +12,5 @@ Makefile.in
 scripts/
 *.swo
 *.swp
+cscope.*
+xde-setup
