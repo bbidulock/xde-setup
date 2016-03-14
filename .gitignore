@@ -14,3 +14,4 @@ scripts/
 *.swp
 cscope.*
 xde-setup
+xde-*.tar.xz
