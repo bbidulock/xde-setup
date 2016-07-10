@@ -1,7 +1,7 @@
 
 AC_PREREQ(2.69)
-AC_INIT([xde-setup],[1.0.2],[bugs@openss7.org],[xde-setup])
-AC_REVISION([1.0.2])
+AC_INIT([xde-setup],[1.0.24],[bugs@openss7.org],[xde-setup])
+AC_REVISION([1.0.24])
 
 AC_CONFIG_SRCDIR([configure.ac])
 AC_CONFIG_AUX_DIR([scripts])

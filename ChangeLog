@@ -1,0 +1,478 @@
+# created with git log --stat=76 -M -C|fmt -sct -w80
+
+commit e15f0fa33751e485a7f73b9cee462d1c1d31445f
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:34:01 2016 -0700
+
+    lxde files
+
+ src/share/xde/lxde/version | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 135336de5edfeeb23eb3da26e923b2121ff46d78
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:33:29 2016 -0700
+
+    wmaker files
+
+ src/share/xde/wmaker/version | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 30a737db8b94faae1dcc129eee802ef1fe3d21bb
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:33:13 2016 -0700
+
+    waimea files
+
+ src/share/xde/waimea/setup.sh | 156 ++++++++++++++++++++++++++++++++++++++
+ src/share/xde/waimea/start.sh |  56 ++++++++++++++
+ src/share/xde/waimea/version  |   1 +
+ 3 files changed, 213 insertions(+)
+
+commit 600564076dc48c7394f3cb0d1efa32fbd1d7ff47
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:32:59 2016 -0700
+
+    vtwm files
+
+ src/share/xde/vtwm/setup.sh | 179 ++++++++++++++++++++++++++++++++++++++++
+ src/share/xde/vtwm/start.sh |  56 +++++++++++++
+ src/share/xde/vtwm/version  |   1 +
+ 3 files changed, 236 insertions(+)
+
+commit beb605c4ac4e46cd8f4fa164dffb3ed8b0bceb95
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:32:45 2016 -0700
+
+    uwm files
+
+ src/share/xde/uwm/version | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 8f6a8a65ed26e8d873b26ed60032fcf2380615ec
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:32:28 2016 -0700
+
+    twm files
+
+ src/share/xde/twm/setup.sh | 179 +++++++++++++++++++++++++++++++++++++++++
+ src/share/xde/twm/start.sh |  56 +++++++++++++
+ src/share/xde/twm/version  |   1 +
+ 3 files changed, 236 insertions(+)
+
+commit 476faf600df4f05520d702e17df489a80df71094
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:32:13 2016 -0700
+
+    pekwm files
+
+ src/share/xde/pekwm/autoproperties | 248 ++++++++++++++++
+ src/share/xde/pekwm/config         |  19 ++
+ src/share/xde/pekwm/config_system  | 108 +++++++
+ src/share/xde/pekwm/history        |  19 ++
+ src/share/xde/pekwm/keys           | 318 ++++++++++++++++++++
+ src/share/xde/pekwm/menu           | 515 +++++++++++++++++++++++++++++++++
+ src/share/xde/pekwm/mouse          |  15 +
+ src/share/xde/pekwm/vars           |   1 +
+ src/share/xde/pekwm/version        |   1 +
+ src/share/xde/pekwm/window         |  69 +++++
+ 10 files changed, 1313 insertions(+)
+
+commit 588317cf4aaf8cc2b11b090f2f7ca078d28d2595
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:31:57 2016 -0700
+
+    openbox files
+
+ src/share/xde/openbox/lxde-rc.xml     |  826 +++++++++++++
+ src/share/xde/openbox/lxde-rc.xml.new |  732 ++++++++++++
+ src/share/xde/openbox/menu            |  298 +++++
+ src/share/xde/openbox/menu.bak        |  193 +++
+ src/share/xde/openbox/menu.xml        | 1817 +++++++++++++++++++++++++++++
+ src/share/xde/openbox/menu.xml.back   | 1723 +++++++++++++++++++++++++++
+ src/share/xde/openbox/menu.xml.new    | 1723 +++++++++++++++++++++++++++
+ src/share/xde/openbox/menu.xml.old    |   60 +
+ src/share/xde/openbox/rc.xml          |  502 ++++++++
+ src/share/xde/openbox/rc.xml.orig     |  424 +++++++
+ src/share/xde/openbox/unx-rc.xml      |  502 ++++++++
+ src/share/xde/openbox/version         |    1 +
+ src/share/xde/openbox/xdg-menu.xml    |  464 ++++++++
+ 13 files changed, 9265 insertions(+)
+
+commit 36fcc1d0f0e7af30f5cb294e32b7466096630810
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:31:38 2016 -0700
+
+    metacity files
+
+ src/share/xde/metacity/version | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 3003a5b434f3d6bee44db1e6c1d3eb0ede534c03
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:31:20 2016 -0700
+
+    jwm files
+
+ src/share/xde/jwm/config    |  21 +++++
+ src/share/xde/jwm/getstyles | 106 ++++++++++++++++++++++++
+ src/share/xde/jwm/setup.sh  | 177 ++++++++++++++++++++++++++++++++++++++++
+ src/share/xde/jwm/start.sh  |  48 +++++++++++
+ src/share/xde/jwm/version   |   1 +
+ 5 files changed, 353 insertions(+)
+
+commit 1e97a3c4f428cd249a56c6148d47392bc4c8d9f1
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:31:05 2016 -0700
+
+    icewm files
+
+ src/share/xde/icewm/setup.sh | 151 +++++++++++++++++++++++++++++++++++++++
+ src/share/xde/icewm/start.sh |  71 ++++++++++++++++++
+ src/share/xde/icewm/version  |   1 +
+ 3 files changed, 223 insertions(+)
+
+commit 1cd3b2f402d1b5c61c4a7388f629c6884f0f2aef
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:30:49 2016 -0700
+
+    fvwm files
+
+ src/share/xde/fvwm/version | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 8c1d3a7fba9a20904955e8a07b0a90b5b6b2ffb7
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:30:36 2016 -0700
+
+    fluxbox files
+
+ src/share/xde/fluxbox/setup.pl | 203 +++++++++++++++++++++++++++++++++++++
+ src/share/xde/fluxbox/setup.sh | 156 ++++++++++++++++++++++++++++
+ src/share/xde/fluxbox/start.sh |  55 ++++++++++
+ src/share/xde/fluxbox/version  |   1 +
+ 4 files changed, 415 insertions(+)
+
+commit c20330a3121dff6674b9b1e9ec906f70edd64484
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:30:13 2016 -0700
+
+    echinus files
+
+ src/share/xde/echinus/version | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit bc35df9fcfd811b2de4071501139a84acca57892
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:29:51 2016 -0700
+
+    ctwm files
+
+ src/share/xde/ctwm/setup.sh | 179 ++++++++++++++++++++++++++++++++++++++++
+ src/share/xde/ctwm/start.sh |  56 +++++++++++++
+ src/share/xde/ctwm/version  |   1 +
+ 3 files changed, 236 insertions(+)
+
+commit deb970cb534f7be3c7b1b0bc58598249dc1dc0e0
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:29:37 2016 -0700
+
+    blackbox files
+
+ src/share/xde/blackbox/setup.pl | 203 ++++++++++++++++++++++++++++++++++++
+ src/share/xde/blackbox/setup.sh | 155 +++++++++++++++++++++++++++
+ src/share/xde/blackbox/start.sh |  56 ++++++++++
+ src/share/xde/blackbox/version  |   1 +
+ src/share/xde/blackbox/xde-rc   |  34 ++++++
+ 5 files changed, 449 insertions(+)
+
+commit 9f9cd6628479f1f9091c85753dde17b193442c52
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:29:21 2016 -0700
+
+    adwm files
+
+ src/share/xde/adwm/adwmrc  |  27 ++++++++
+ src/share/xde/adwm/keysrc  |  99 ++++++++++++++++++++++++++++
+ src/share/xde/adwm/stylerc | 143 +++++++++++++++++++++++++++++++++++++++++
+ src/share/xde/adwm/version |   1 +
+ 4 files changed, 270 insertions(+)
+
+commit 999ab941be1333d1e9a5e0da91319d5bfff1c808
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:28:40 2016 -0700
+
+    vtwm files
+
+ src/share/xde/vtwm/config    | 10 ++-----
+ src/share/xde/vtwm/menu      |  2 +-
+ src/share/xde/vtwm/stylemenu | 62 ++++------------------------------------
+ 3 files changed, 8 insertions(+), 66 deletions(-)
+
+commit 00efd721f17ad34eac08ae2f7eaf1f7cab94060c
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:28:28 2016 -0700
+
+    twm files
+
+ src/share/xde/twm/config    |   6 +--
+ src/share/xde/twm/start     | 102 ++++++++++++++++++----------------------
+ src/share/xde/twm/stylemenu |  62 ++----------------------
+ 3 files changed, 54 insertions(+), 116 deletions(-)
+
+commit ecdd49ed79544a29753c6807b8ce7fc29fff2aab
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:28:16 2016 -0700
+
+    pekwm files
+
+ src/share/xde/pekwm/start | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+commit 21118a5610072119a87e5f4a810f7478b7a053b8
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:27:57 2016 -0700
+
+    ctwm files
+
+ src/share/xde/ctwm/buttons   |  2 +-
+ src/share/xde/ctwm/config    | 10 ++-----
+ src/share/xde/ctwm/menu      |  2 +-
+ src/share/xde/ctwm/stylemenu | 62 ++++------------------------------------
+ 4 files changed, 9 insertions(+), 67 deletions(-)
+
+commit 76ced67bf322230e54797b400ffcfa1077cc51ee
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jan 30 09:27:45 2016 -0700
+
+    blackbox files
+
+ src/share/xde/blackbox/keys |  16 +-
+ src/share/xde/blackbox/menu | 604 +++++++---------------------------------
+ src/share/xde/blackbox/rc   |   2 +-
+ 3 files changed, 112 insertions(+), 510 deletions(-)
+
+commit 73b2573de91c8ab7448526389caf676e0df96028
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Wed May 28 00:31:20 2014 -0600
+
+    check in new files
+
+ INSTALL                                          |    4 +-
+ configure.template                               |   17 +-
+ src/share/xde/{fluxbox/usermenu => 2bwm/start}   |    0
+ src/share/xde/{fluxbox/usermenu => adwm/start}   |    0
+ .../xde/{fluxbox/usermenu => afterstep/start}    |    0
+ .../xde/{fluxbox/usermenu => awesome/start}      |    0
+ src/share/xde/blackbox/TODO                      |    6 +
+ src/share/xde/blackbox/keys                      |  194 +++
+ src/share/xde/blackbox/menu                      |  890 +++++++------
+ src/share/xde/blackbox/{xde-rc => rc}            |   38 +-
+ src/share/xde/blackbox/setup                     |   91 ++
+ src/share/xde/blackbox/start                     |   49 +
+ src/share/xde/ctwm/apps                          |  338 +++++
+ src/share/xde/ctwm/buttons                       |   46 +
+ src/share/xde/ctwm/config                        |   47 +
+ src/share/xde/ctwm/defaults                      |   19 +
+ src/share/xde/ctwm/getstyles                     |   58 +
+ src/share/xde/ctwm/keys                          |  139 +++
+ src/share/xde/ctwm/menu                          |  389 ++++++
+ src/share/xde/ctwm/rc                            | 1180 ++++++++++++++++++
+ src/share/xde/ctwm/rc.m4                         |  119 ++
+ src/share/xde/ctwm/setstyle                      |   29 +
+ src/share/xde/ctwm/setup                         |   91 ++
+ src/share/xde/ctwm/start                         |   73 ++
+ src/share/xde/ctwm/start.new                     |   43 +
+ src/share/xde/ctwm/stylemenu                     |   81 ++
+ src/share/xde/ctwm/stylerc                       |   11 +
+ src/share/xde/ctwm/winmenu                       |   64 +
+ src/share/xde/{fluxbox/usermenu => cwm/start}    |    0
+ src/share/xde/{fluxbox/usermenu => dtwm/start}   |    0
+ src/share/xde/{fluxbox/usermenu => dwm/start}    |    0
+ .../xde/{fluxbox/usermenu => echinus/start}      |    0
+ src/share/xde/etwm/setup                         |   91 ++
+ src/share/xde/etwm/start                         |   73 ++
+ src/share/xde/fluxbox/apps                       |   10 +-
+ src/share/xde/fluxbox/fbdesk                     |   16 +-
+ src/share/xde/fluxbox/fbdesk.icons               |   48 +-
+ src/share/xde/fluxbox/init                       |  186 +--
+ src/share/xde/fluxbox/menu                       |  701 +++++++----
+ src/share/xde/fluxbox/overlay                    |    2 +-
+ src/share/xde/fluxbox/setup                      |   91 ++
+ src/share/xde/fluxbox/slitlist                   |    1 +
+ src/share/xde/fluxbox/start                      |   47 +
+ src/share/xde/fluxbox/usermenu                   |    1 +
+ src/share/xde/fluxbox/xde-init                   |  184 +--
+ src/share/xde/{fluxbox/usermenu => flwm/start}   |    0
+ src/share/xde/{fluxbox/usermenu => fvwm/start}   |    0
+ src/share/xde/icewm/menu                         |  599 ++++++---
+ src/share/xde/icewm/preferences                  |   36 +-
+ src/share/xde/icewm/programs                     |  583 ++++++---
+ src/share/xde/icewm/setup                        |   83 ++
+ src/share/xde/icewm/start                        |   51 +
+ src/share/xde/icewm/theme                        |   23 +-
+ src/share/xde/icewm/toolbar                      |    6 +-
+ src/share/xde/jwm/TODO                           |    3 +
+ src/share/xde/jwm/defaults                       |   22 +
+ src/share/xde/jwm/desktop                        |   41 +
+ src/share/xde/jwm/groups                         |   52 +
+ src/share/xde/jwm/keys                           |  116 ++
+ src/share/xde/jwm/menu                           |  447 +++++++
+ src/share/xde/jwm/paths                          |   17 +
+ src/share/xde/jwm/rc                             |   12 +
+ src/share/xde/jwm/root                           |    7 +
+ src/share/xde/jwm/setstyle                       |   13 +
+ src/share/xde/jwm/start                          |   70 ++
+ src/share/xde/jwm/style                          |    4 +
+ src/share/xde/jwm/tray                           |   55 +
+ src/share/xde/{fluxbox/usermenu => matwm2/start} |    0
+ .../xde/{fluxbox/usermenu => metacity/start}     |    0
+ src/share/xde/{fluxbox/usermenu => mwm/start}    |    0
+ .../xde/{fluxbox/usermenu => openbox/start}      |    0
+ src/share/xde/{fluxbox/usermenu => pekwm/start}  |    0
+ .../xde/{fluxbox/usermenu => spectrwm/start}     |    0
+ src/share/xde/twm/apps                           |  338 +++++
+ src/share/xde/twm/buttons                        |   46 +
+ src/share/xde/twm/config                         |   43 +
+ src/share/xde/twm/defaults                       |   19 +
+ src/share/xde/twm/getstyles                      |   58 +
+ src/share/xde/twm/keys                           |  139 +++
+ src/share/xde/twm/menu                           |  385 ++++++
+ src/share/xde/twm/rc                             |  961 ++++++++++++++
+ src/share/xde/twm/rc.m4                          |  119 ++
+ src/share/xde/twm/setstyle                       |   29 +
+ src/share/xde/twm/setup                          |  113 ++
+ src/share/xde/twm/start                          |   65 +
+ src/share/xde/twm/start.new                      |   34 +
+ src/share/xde/twm/stylemenu                      |   81 ++
+ src/share/xde/twm/stylerc                        |   11 +
+ src/share/xde/twm/winmenu                        |   64 +
+ src/share/xde/uwm/buttons                        |   56 +
+ src/share/xde/uwm/keys                           |   81 ++
+ src/share/xde/uwm/menu                           |  334 +++++
+ src/share/xde/uwm/panel                          |  258 ++++
+ src/share/xde/{fluxbox/usermenu => uwm/setup}    |    0
+ src/share/xde/{fluxbox/usermenu => uwm/start}    |    0
+ src/share/xde/uwm/uwmrc                          | 1134 +++++++++++++++++
+ src/share/xde/uwm/winmenu                        |   31 +
+ src/share/xde/vtwm/apps                          |  338 +++++
+ src/share/xde/vtwm/buttons                       |   46 +
+ src/share/xde/vtwm/config                        |   47 +
+ src/share/xde/vtwm/defaults                      |   19 +
+ src/share/xde/vtwm/getstyles                     |   58 +
+ src/share/xde/vtwm/keys                          |  139 +++
+ src/share/xde/vtwm/menu                          |  387 ++++++
+ src/share/xde/vtwm/rc                            | 1175 +++++++++++++++++
+ src/share/xde/vtwm/rc.m4                         |  119 ++
+ src/share/xde/vtwm/setstyle                      |   29 +
+ src/share/xde/vtwm/setup                         |   91 ++
+ src/share/xde/vtwm/start                         |   73 ++
+ src/share/xde/vtwm/start.new                     |   43 +
+ src/share/xde/vtwm/stylemenu                     |   81 ++
+ src/share/xde/vtwm/stylerc                       |   11 +
+ src/share/xde/vtwm/winmenu                       |   64 +
+ src/share/xde/waimea/actionrc                    |  239 ++++
+ src/share/xde/waimea/config                      |   25 +
+ src/share/xde/waimea/menu                        |  494 ++++++++
+ src/share/xde/waimea/setup                       |   91 ++
+ src/share/xde/waimea/start                       |   49 +
+ src/share/xde/{fluxbox/usermenu => wind/start}   |    0
+ src/share/xde/{fluxbox/usermenu => wmaker/start} |    0
+ src/share/xde/{fluxbox/usermenu => wmx/start}    |    0
+ src/share/xde/{fluxbox/usermenu => yeahwm/start} |    0
+ src/xde-setup.in                                 |   28 +
+ 123 files changed, 14493 insertions(+), 1259 deletions(-)
+
+commit 41adf8d05cf0bb24c9014c16136ade4b2807c282
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Dec 30 12:41:28 2013 -0700
+
+    first build
+
+ .gitignore          |  14 +-
+ AUTHORS             |   0
+ COPYING             | 674 ++++++++++++++++++++++++++++++++++++++++++++++++
+ INSTALL             | 370 ++++++++++++++++++++++++++
+ NEWS                |   0
+ README              |   0
+ THANKS              |   0
+ configure.template  |   1 +
+ src/xdg/Makefile.am |   2 +-
+ 9 files changed, 1054 insertions(+), 7 deletions(-)
+
+commit d2da8ae5081304b5730d9347bea7774e093b8550
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Dec 30 12:33:54 2013 -0700
+
+    initial commit
+
+ .gitignore                                      |   12 +
+ Makefile.am                                     |    1 +
+ autogen.sh                                      |   20 +
+ configure.template                              |   40 +
+ src/Makefile.am                                 |    2 +
+ src/applications/defaults.list                  |   10 +
+ src/applications/mimeapps.list                  |   37 +
+ src/applications/mimeinfo.cache                 |    6 +
+ src/share/Makefile.am                           |   44 +
+ src/share/lxpanel/profile/BLACKBOX/config       |    4 +
+ src/share/lxpanel/profile/BLACKBOX/panels/panel |  203 +++
+ src/share/lxpanel/profile/FLUXBOX/config        |    4 +
+ src/share/lxpanel/profile/FLUXBOX/panels/panel  |  203 +++
+ src/share/lxpanel/profile/FVWM/config           |    4 +
+ src/share/lxpanel/profile/FVWM/panels/panel     |  203 +++
+ src/share/lxpanel/profile/ICEWM/config          |    4 +
+ src/share/lxpanel/profile/ICEWM/panels/panel    |  203 +++
+ src/share/lxpanel/profile/OPENBOX/config        |    4 +
+ src/share/lxpanel/profile/OPENBOX/panels/panel  |  203 +++
+ src/share/lxpanel/profile/WMAKER/config         |    4 +
+ src/share/lxpanel/profile/WMAKER/panels/panel   |  203 +++
+ src/share/xde/blackbox/menu                     |  453 +++++++
+ src/share/xde/blackbox/xde-rc                   |   34 +
+ src/share/xde/fluxbox/apps                      |   36 +
+ src/share/xde/fluxbox/fbdesk                    |   12 +
+ src/share/xde/fluxbox/fbdesk.icons              |    6 +
+ src/share/xde/fluxbox/fbpager                   |   33 +
+ src/share/xde/fluxbox/init                      |  105 ++
+ src/share/xde/fluxbox/keys                      |  195 +++
+ src/share/xde/fluxbox/menu                      |  252 ++++
+ src/share/xde/fluxbox/menuconfig                |   67 +
+ src/share/xde/fluxbox/overlay                   |    2 +
+ src/share/xde/fluxbox/slitlist                  |   34 +
+ src/share/xde/fluxbox/startup                   |  197 +++
+ src/share/xde/fluxbox/unexicon-menu             |  252 ++++
+ src/share/xde/fluxbox/usermenu                  |    0
+ src/share/xde/fluxbox/windowmenu                |   16 +
+ src/share/xde/fluxbox/xde-init                  |  105 ++
+ src/share/xde/icewm/focus_mode                  |    1 +
+ src/share/xde/icewm/keys                        |    0
+ src/share/xde/icewm/menu                        |  211 +++
+ src/share/xde/icewm/preferences                 | 1312 +++++++++++++++++++
+ src/share/xde/icewm/preferences.bak             | 1310 ++++++++++++++++++
+ src/share/xde/icewm/prefoverride                |    0
+ src/share/xde/icewm/programs                    |  183 +++
+ src/share/xde/icewm/recent.menu                 |    3 +
+ src/share/xde/icewm/theme                       |   12 +
+ src/share/xde/icewm/toolbar                     |    4 +
+ src/share/xde/icewm/winoptions                  |    0
+ src/share/xde/images/arch-banner.png            |  Bin 0 -> 11567 bytes
+ src/share/xde/images/banner.png                 |    1 +
+ src/share/xde/images/unexicon-banner.png        |  Bin 0 -> 26181 bytes
+ src/xdg/Makefile.am                             |   19 +
+ src/xdg/pcmanfm/BLACKBOX/pcmanfm.conf           |   36 +
+ src/xdg/pcmanfm/FLUXBOX/pcmanfm.conf            |   36 +
+ src/xdg/pcmanfm/FVWM/pcmanfm.conf               |   36 +
+ src/xdg/pcmanfm/ICEWM/pcmanfm.conf              |   36 +
+ src/xdg/pcmanfm/OPENBOX/pcmanfm.conf            |   36 +
+ src/xdg/pcmanfm/WMAKER/pcmanfm.conf             |   36 +
+ src/xdg/xde/xde-session/BLACKBOX/desktop.conf   |   89 ++
+ src/xdg/xde/xde-session/FLUXBOX/autostart       |    4 +
+ src/xdg/xde/xde-session/FLUXBOX/desktop.conf    |   89 ++
+ src/xdg/xde/xde-session/FVWM/desktop.conf       |   89 ++
+ src/xdg/xde/xde-session/ICEWM/desktop.conf      |   89 ++
+ src/xdg/xde/xde-session/LXDE/autostart          |    8 +
+ src/xdg/xde/xde-session/OPENBOX/desktop.conf    |   89 ++
+ src/xdg/xde/xde-session/WMAKER/desktop.conf     |   89 ++
+ src/xdg/xde/xde-session/default/input.ini       |   57 +
+ src/xdg/xde/xde-session/default/xsettings.ini   |  101 ++
+ 69 files changed, 7189 insertions(+)
