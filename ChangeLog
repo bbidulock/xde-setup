@@ -1,5 +1,77 @@
 # created with git log --stat=76 -M -C|fmt -sct -w80
 
+commit e4702eb22ba1f855ca6c96007a58e14e8913f3f3
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jul 9 18:52:59 2016 -0600
+
+    do not need c compiler
+
+ configure.sh | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 269fe8852aaef9359c863142247ad17eb43d3107
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jul 9 18:51:36 2016 -0600
+
+    simplify distribution
+
+ .gitignore                         |  32 ++-
+ AUTHORS.in                         |   3 -
+ ChangeLog                          | 478 +++++++++++++++++++++++++++++++++
+ Makefile.am                        |  79 ++++--
+ NEWS.in                            |  11 -
+ README.in                          |   0
+ README.md.in                       |  21 +-
+ THANKS.in                          |   0
+ TODO.in                            |   0
+ autogen.sh                         |  55 ++--
+ configure.template => configure.ac |   4 +-
+ dist.sh                            |   9 +
+ gennews.sh                         |  34 +++
+ rebuild.sh                         |   4 +-
+ 14 files changed, 634 insertions(+), 96 deletions(-)
+
+commit a6239e74a231219ef427301bb211d93207599626
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Mar 14 12:00:00 2016 -0600
+
+    add ignore files
+
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit d27e18bbd52fc2b36950bcb732c48d7405aa4b9b
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Wed Mar 9 12:00:00 2016 -0700
+
+    add ignore files
+
+ .gitignore | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 33ba4d4a100a783bc7acf385e473a4bf5f0b0f75
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sun Feb 14 01:14:20 2016 -0700
+
+    minor updates to build system
+
+ AUTHORS              |  3 +++
+ AUTHORS.in           |  3 +++
+ Makefile.am          | 39 +++++++++++++++++++++++++++++
+ NEWS                 | 11 +++++++++
+ NEWS.in              | 11 +++++++++
+ AUTHORS => README.in |  0
+ README.md            | 64 ++++++++++++++++++++++++++++++++++++++++++++++++
+ README.md.in         | 64 ++++++++++++++++++++++++++++++++++++++++++++++++
+ AUTHORS => THANKS.in |  0
+ AUTHORS => TODO      |  0
+ AUTHORS => TODO.in   |  0
+ autogen.sh           | 37 +++++++++++++++++++++++-----
+ configure.sh         | 38 ++++++++++++++++++++++++++++
+ configure.template   |  2 +-
+ rebuild.sh           |  9 +++++++
+ 15 files changed, 274 insertions(+), 7 deletions(-)
+
 commit e15f0fa33751e485a7f73b9cee462d1c1d31445f
 Author: Brian Bidulock <bidulock@openss7.org>
 Date:   Sat Jan 30 09:34:01 2016 -0700

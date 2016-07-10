@@ -1,11 +1,47 @@
-xde-setup -- NEWS file.  2016-01-30
+xde-setup -- history of user-visible changes.  
 
-History of major user-visible changes:
-======================================
+Release xde-setup-1.1 released 2016-07-09
+-----------------------------------------
 
-Release xde-setup-1.0.24 released 2016-01-30
--------------------------------------------
+git shortlog -e -n -w80,6,8 1.0...1.1
 
-This is the initial development release of xde-setup.
+Brian Bidulock <bidulock@openss7.org> (29):
+      first build
+      check in new files
+      blackbox files
+      ctwm files
+      pekwm files
+      twm files
+      vtwm files
+      adwm files
+      blackbox files
+      ctwm files
+      echinus files
+      fluxbox files
+      fvwm files
+      icewm files
+      jwm files
+      metacity files
+      openbox files
+      pekwm files
+      twm files
+      uwm files
+      vtwm files
+      waimea files
+      wmaker files
+      lxde files
+      minor updates to build system
+      add ignore files
+      add ignore files
+      simplify distribution
+      do not need c compiler
 
-# vim: set ft=asciidoc tw=72 nocin nosi fo+=tcqlorn:
+
+Release xde-setup-1.0 released 2013-12-30
+-----------------------------------------
+
+git shortlog -e -n -w80,6,8 1.0
+
+Brian Bidulock <bidulock@openss7.org> (1):
+      initial commit
+
