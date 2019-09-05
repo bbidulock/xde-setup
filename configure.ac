@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([xde-setup],[1.1],[bugs@openss7.org],[xde-setup])
-AC_REVISION([1.1])
+AC_INIT([xde-setup],[1.1.13],[bugs@openss7.org],[xde-setup])
+AC_REVISION([1.1.13])
 
 # set better defaults
 AC_PREFIX_DEFAULT([/usr])
@@ -16,13 +16,11 @@ fi
 AC_CONFIG_SRCDIR([configure.ac])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([scripts])
-AC_USE_SYSTEM_EXTENSIONS
-AC_CANONICAL_TARGET
 
-DATE='2017-09-10'
+DATE='2019-09-05'
 AC_SUBST([DATE])
 
-MDOCDATE='September 10, 2017'
+MDOCDATE='September 5, 2019'
 AC_SUBST([MDOCDATE])
 
 BRANCH='master'
