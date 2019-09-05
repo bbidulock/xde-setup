@@ -1,9 +1,9 @@
-[xde-setup -- read me first file.  2017-09-10]: #
+[xde-setup -- read me first file.  2019-09-05]: #
 
 xde-setup
 ===============
 
-Package `xde-setup-1.1` was released under GPLv3 license 2017-09-10.
+Package `xde-setup-1.2` was released under GPLv3 license 2019-09-05.
 
 This package provides a number of "C"-language tools for setting up
 light-weight window managers.  It is not really used at the moment.
@@ -12,7 +12,7 @@ light-weight window managers.  It is not really used at the moment.
 Release
 -------
 
-This is the `xde-setup-1.1` package, released 2017-09-10.  This
+This is the `xde-setup-1.2` package, released 2019-09-05.  This
 release, and the latest version, can be obtained from [GitHub][1], using
 a command such as:
 
@@ -69,12 +69,12 @@ Report issues on GitHub [here][2].
 
 [1]: https://github.com/bbidulock/xde-setup
 [2]: https://github.com/bbidulock/xde-setup/issues
-[3]: https://github.com/bbidulock/xde-setup/blob/master/NEWS
-[4]: https://github.com/bbidulock/xde-setup/blob/master/ChangeLog
-[5]: https://github.com/bbidulock/xde-setup/blob/master/TODO
-[6]: https://github.com/bbidulock/xde-setup/blob/master/COMPLIANCE
-[7]: https://github.com/bbidulock/xde-setup/blob/master/INSTALL
-[8]: https://github.com/bbidulock/xde-setup/blob/master/LICENSE
-[9]: https://github.com/bbidulock/xde-setup/blob/master/COPYING
+[3]: https://github.com/bbidulock/xde-setup/blob/1.2/NEWS
+[4]: https://github.com/bbidulock/xde-setup/blob/1.2/ChangeLog
+[5]: https://github.com/bbidulock/xde-setup/blob/1.2/TODO
+[6]: https://github.com/bbidulock/xde-setup/blob/1.2/COMPLIANCE
+[7]: https://github.com/bbidulock/xde-setup/blob/1.2/INSTALL
+[8]: https://github.com/bbidulock/xde-setup/blob/1.2/LICENSE
+[9]: https://github.com/bbidulock/xde-setup/blob/1.2/COPYING
 
 [ vim: set ft=markdown sw=4 tw=72 nocin nosi fo+=tcqlorn spell: ]: #

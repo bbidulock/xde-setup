@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([xde-setup],[1.1.13],[bugs@openss7.org],[xde-setup])
-AC_REVISION([1.1.13])
+AC_INIT([xde-setup],[1.2],[bugs@openss7.org],[xde-setup])
+AC_REVISION([1.2])
 
 # set better defaults
 AC_PREFIX_DEFAULT([/usr])
@@ -23,11 +23,11 @@ AC_SUBST([DATE])
 MDOCDATE='September 5, 2019'
 AC_SUBST([MDOCDATE])
 
-BRANCH='master'
+BRANCH='1.2'
 AC_SUBST([BRANCH])
 
 # Initialize Automake
-AM_INIT_AUTOMAKE([1.16 dist-lzip no-dist-gzip std-options -Wall color-tests silent-rules tar-pax])
+AM_INIT_AUTOMAKE([gnits 1.16 dist-lzip no-dist-gzip std-options -Wall color-tests silent-rules tar-pax])
 AM_MAINTAINER_MODE
 AM_SILENT_RULES([yes])
 

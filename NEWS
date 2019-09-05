@@ -1,11 +1,51 @@
-xde-setup -- history of user-visible changes.  
+xde-setup -- history of user-visible changes.  2019-09-05
+
+Release xde-setup-1.2 released 2019-09-05
+-----------------------------------------
+
+git tag -n100 -l 1.2
+
+1.2             Maintenance Release 1.2
+
+    This is the third release of the xde-setup package that provides a
+    number of "C"-language tools for setting up light-weight window
+    managers. It is not really used at the moment.
+
+    This release is a maintenance release that is only intended on updating
+    the build system, generating a better NEWS file, handles annotated tags
+    better, and converts the release archives to lzip compression.
+
+    Included in the release is an autoconf tarball for building the package
+    from source. See the NEWS and TODO file in the release for more
+    information. Please report problems to the issues list on GitHub.
+
+git shortlog -e -n -w80,6,8 1.1...1.2
+
+Brian Bidulock <bidulock@openss7.org> (16):
+      git hates trailing space
+      better formatting
+      limit changelog
+      update build system
+      update for gettext 0.20.1
+      generate NEWS better
+      add release notes
+      build release notes
+      place filename last in sed command
+      improved defaults and lzip compression
+      better defaults now
+      parallel distcheck
+      parallel build
+      do not need c compiler
+      ignore release file products
+      add license to repo
+
 
 Release xde-setup-1.1 released 2016-07-09
 -----------------------------------------
 
 git shortlog -e -n -w80,6,8 1.0...1.1
 
-Brian Bidulock <bidulock@openss7.org> (29):
+Brian Bidulock <bidulock@openss7.org> (30):
       first build
       check in new files
       blackbox files
@@ -35,6 +75,7 @@ Brian Bidulock <bidulock@openss7.org> (29):
       add ignore files
       simplify distribution
       do not need c compiler
+      update release files
 
 
 Release xde-setup-1.0 released 2013-12-30
