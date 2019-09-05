@@ -28,8 +28,6 @@ esac
 ./configure \
 	--enable-maintainer-mode \
 	--enable-dependency-tracking \
-	--prefix=/usr \
-	--sysconfdir=/etc \
 	CPPFLAGS="$CPPFLAGS" \
 	CFLAGS="$DEBUG_CFLAGS -Wall -Werror $CFLAGS" \
 	CXXFLAGS="$DEBUG_CXXFLAGS -Wall -Werror $CXXFLAGS" \
