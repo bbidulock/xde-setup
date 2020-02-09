@@ -21,7 +21,7 @@ git tag -n100 -l 1.2
 
 git shortlog -e -n -w80,6,8 1.1...1.2
 
-Brian Bidulock <bidulock@openss7.org> (16):
+Brian Bidulock <bidulock@openss7.org> (17):
       git hates trailing space
       better formatting
       limit changelog
@@ -38,6 +38,7 @@ Brian Bidulock <bidulock@openss7.org> (16):
       do not need c compiler
       ignore release file products
       add license to repo
+      update release files
 
 
 Release xde-setup-1.1 released 2016-07-09
